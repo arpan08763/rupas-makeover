@@ -1,0 +1,359 @@
+<!DOCTYPE html><html>
+<head>
+<title>Party Makeup</title><style>
+
+/* 🔥 CUSTOM FONTS */
+@font-face {
+  font-family: 'Archane';
+  src: url('Archane.ttf');
+}
+@font-face {
+  font-family: 'Zaslia';
+  src: url('zaslia.ttf');
+}
+
+/* 💎 BODY */
+body{
+margin:0;
+font-family:'Zaslia';
+background:linear-gradient(135deg,#fff0f5,#ffe0ea,#fceabb);
+overflow-x:hidden;
+}
+
+/* 🔥 INTRO (ADVANCED ANIMATION) */
+.intro{
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#fff0f5,#fceabb);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+animation:fadeOut 2s ease forwards;
+animation-delay:2.5s;
+}
+
+.intro h1{
+font-family:'Archane';
+font-size:45px;
+color:#b8962e;
+animation:zoomGlow 1.5s ease;
+}
+
+@keyframes zoomGlow{
+0%{
+transform:scale(0.3);
+opacity:0;
+text-shadow:none;
+}
+100%{
+transform:scale(1);
+opacity:1;
+text-shadow:0 0 20px rgba(212,175,55,0.7);
+}
+}
+
+@keyframes fadeOut{
+to{opacity:0; visibility:hidden;}
+}
+
+/* 👑 HEADING */
+h1{
+text-align:center;
+padding:40px;
+font-family:'Archane';
+font-size:48px;
+background:linear-gradient(45deg,#d4af37,#ffd700,#b8962e);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* 📸 GALLERY */
+.slider{
+overflow:hidden;
+margin:30px;
+}
+
+.slide-track{
+display:flex;
+width:200%;
+animation:scroll 18s linear infinite;
+}
+
+.slide-track img{
+width:260px;
+height:200px;
+margin:10px;
+border-radius:15px;
+object-fit:contain;
+background:#fff;
+padding:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.slide-track img:hover{
+transform:scale(1.1);
+box-shadow:0 10px 30px rgba(212,175,55,0.7);
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* 🔥 POPUP (BLUR GLASS EFFECT) */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+backdrop-filter:blur(12px);
+background:rgba(0,0,0,0.4);
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeIn 0.4s ease;
+}
+
+.popup img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+animation:zoomPop 0.4s ease;
+}
+
+@keyframes zoomPop{
+from{transform:scale(0.6);}
+to{transform:scale(1);}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* 📲 BUTTON */
+.whatsapp, .booking{
+position:fixed;
+right:20px;
+padding:12px 16px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-family:'Zaslia';
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.whatsapp{
+bottom:20px;
+background:#25D366;
+}
+.booking{
+bottom:80px;
+background:#ff4d6d;
+}
+
+.whatsapp:hover, .booking:hover{
+transform:scale(1.1);
+}
+
+</style></head><body><!-- 🔥 INTRO --><div class="intro">
+<h1>Rupa's Makeover</h1>
+</div><h1>Party Makeup</h1><!-- 📸 GALLERY --><div class="slider">
+<div class="slide-track"><img src="e1.jpeg" onclick="openImg(this.src)">
+<img src="e2.jpeg" onclick="openImg(this.src)">
+<img src="e3.jpeg" onclick="openImg(this.src)">
+<img src="e4.jpeg" onclick="openImg(this.src)">
+<img src="e5.jpeg" onclick="openImg(this.src)"><img src="e1.jpeg" onclick="openImg(this.src)">
+<img src="e2.jpeg" onclick="openImg(this.src)">
+<img src="e3.jpeg" onclick="openImg(this.src)">
+<img src="e4.jpeg" onclick="openImg(this.src)">
+<img src="e5.jpeg" onclick="openImg(this.src)"></div>
+</div><!-- 🔥 POPUP --><div class="popup" id="popup" onclick="closeImg()">
+<img id="popupImg">
+</div><!-- 📲 BUTTON --><a href="https://wa.me/918617352554" class="whatsapp">WhatsApp</a>
+
+<a href="https://wa.me/918617352554?text=Hello%20I%20want%20to%20book%20Party%20Makeup" 
+class="booking">Book Now</a>
+
+<script>
+
+/* intro remove */
+setTimeout(()=>{
+document.querySelector('.intro').style.display="none";
+},2500);
+
+/* popup */
+function openImg(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popupImg").src = src;
+}
+
+function closeImg(){
+document.getElementById("popup").style.display="none";
+}
+
+</script></body>
+</html><!DOCTYPE html><html>
+<head>
+<title>Party Makeup</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet"><style>
+
+/* 🔥 CUSTOM FONTS */
+@font-face {
+  font-family: 'Archane';
+  src: url('Archane.ttf');
+}
+
+@font-face {
+  font-family: 'Zaslia';
+  src: url('zaslia.ttf');
+}
+
+/* 💎 BODY */
+body{
+margin:0;
+font-family:'Zaslia';
+background:linear-gradient(135deg,#fff0f5,#ffe0ea,#fceabb);
+overflow-x:hidden;
+}
+
+/* 🔥 INTRO */
+.intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#fff0f5,#fceabb);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeOut 2s ease forwards;
+animation-delay:2s;
+}
+
+.intro h1{
+font-family:'Archane';
+font-size:42px;
+color:#b8962e;
+}
+
+/* 👑 HEADING */
+h1{
+text-align:center;
+padding:40px;
+font-family:'Archane';
+font-size:48px;
+
+background:linear-gradient(45deg,#d4af37,#ffd700,#b8962e);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* 📸 GALLERY */
+.slider{
+overflow:hidden;
+margin:30px;
+}
+
+.slide-track{
+display:flex;
+width:200%;
+animation:scroll 18s linear infinite;
+}
+
+.slide-track img{
+width:260px;
+height:200px;
+margin:10px;
+border-radius:15px;
+object-fit:contain;
+background:#fff;
+padding:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.slide-track img:hover{
+transform:scale(1.08);
+box-shadow:0 10px 25px rgba(212,175,55,0.6);
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* 🔥 POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.popup img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+/* 📲 BUTTON */
+.whatsapp, .booking{
+position:fixed;
+right:20px;
+padding:12px 16px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-family:'Zaslia';
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp{
+bottom:20px;
+background:#25D366;
+}
+
+.booking{
+bottom:80px;
+background:#ff4d6d;
+}
+</div><!-- 📲 BUTTON --><a href="https://wa.me/918617352554" class="whatsapp">WhatsApp</a>
+
+<a href="https://wa.me/918617352554?text=Hello%20I%20want%20to%20book%20Party%20Makeup" 
+class="booking">Book Now</a>
+
+<script>
+
+/* intro hide */
+setTimeout(()=>{
+document.querySelector('.intro').style.display="none";
+},2000);
+
+/* popup */
+function openImg(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popupImg").src = src;
+}
+
+function closeImg(){
+document.getElementById("popup").style.display="none";
+}
+
+</script></body>
+</html>

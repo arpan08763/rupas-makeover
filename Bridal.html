@@ -1,0 +1,285 @@
+<!DOCTYPE html><html>
+<head>
+<title>Rupa's Makeover</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet"><style>
+
+/* 🔥 CUSTOM FONTS */
+@font-face {
+  font-family: 'Archane';
+  src: url('Archane.ttf');
+}
+
+@font-face {
+  font-family: 'Zaslia';
+  src: url('zaslia.ttf');
+}
+
+/* 💎 BODY */
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fff0f5 0%,#ffe0ea 40%,#fceabb 80%);
+overflow-x:hidden;
+}
+
+/* 🔥 INTRO */
+.intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#fff0f5,#fceabb);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeOut 2s ease forwards;
+animation-delay:2s;
+}
+
+.intro h1{
+font-family:'Archane';
+font-size:42px;
+color:#b8962e;
+animation:zoomIn 1.5s ease;
+}
+
+@keyframes zoomIn{
+from{transform:scale(0);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+@keyframes fadeOut{
+to{opacity:0;visibility:hidden;}
+}
+
+/* 👑 HEADING */
+h1{
+text-align:center;
+padding:40px;
+font-family:'Archane';
+font-size:52px;
+
+background:linear-gradient(45deg,#d4af37,#ffd700,#b8962e);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* 💎 CARD */
+.service{
+position:relative;
+width:90%;
+max-width:1100px;
+
+display:flex;
+align-items:center;
+gap:30px;
+
+margin:40px auto;
+padding:20px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.5);
+backdrop-filter:blur(12px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+opacity:0;
+transform:translateY(60px);
+transition:0.8s;
+}
+
+/* 🔄 ZIGZAG */
+.service:nth-of-type(even){
+flex-direction:row-reverse;
+}
+
+.service.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* 🖼 IMAGE */
+.service img{
+width:220px;
+height:150px;
+object-fit:cover;
+border-radius:14px;
+transition:0.4s;
+}
+
+.service:hover img{
+transform:scale(1.08);
+}
+
+/* 💄 TEXT */
+.service-text{
+max-width:500px;
+}
+
+.service-text h3{
+font-family:'Zaslia';
+font-size:26px;
+color:#d6336c;
+}
+
+.service-text p{
+color:#444;
+}
+
+/* ✨ SHIMMER */
+.service::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+transform:translateX(-100%);
+transition:0.6s;
+border-radius:18px;
+}
+
+.service:hover::before{
+transform:translateX(100%);
+}
+
+/* 📱 MOBILE */
+@media(max-width:768px){
+.service{
+flex-direction:column !important;
+text-align:center;
+}
+}
+
+/* 🖤 FOOTER */
+.footer{
+text-align:center;
+padding:25px;
+font-family:'Zaslia';
+letter-spacing:2px;
+color:#111;
+}
+
+/* 📲 WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-size:16px;
+text-decoration:none;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:9999;
+
+display:none;
+}
+
+/* 📅 BOOK NOW BUTTON */
+.booking{
+position:fixed;
+bottom:80px;
+right:20px;
+
+background:#ff4d6d;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-size:16px;
+text-decoration:none;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:9999;
+
+display:none;
+}
+
+/* 🔥 BUTTON ANIMATION */
+.whatsapp, .booking{
+animation:fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style></head><body><!-- 🔥 INTRO --><div class="intro">
+<h1>Rupa's Makeover</h1>
+</div><h1>Bridal Makeup</h1><div class="service">
+<img src="hd.jpeg">
+<div class="service-text">
+<h3>HD Makeup</h3>
+<p>Flawless skin finish.</p>
+</div>
+</div><div class="service">
+<img src="ultra.jpeg">
+<div class="service-text">
+<h3>Ultra HD Makeup</h3>
+<p>Camera perfect bridal look.</p>
+</div>
+</div><div class="service">
+<img src="eye.jpg">
+<div class="service-text">
+<h3>Eye Makeup</h3>
+<p>Smokey, cut crease & glitter looks.</p>
+</div>
+</div><div class="service">
+<img src="hair.jpeg">
+<div class="service-text">
+<h3>Hairstyling</h3>
+<p>Bun, curls, juda styling.</p>
+</div>
+</div><div class="service">
+<img src="saree.jpeg">
+<div class="service-text">
+<h3>Saree Draping</h3>
+<p>Perfect bridal saree draping.</p>
+</div>
+</div><!-- 🖤 FOOTER --><div class="footer">
+Created by Rupa's Makeover © 2026
+</div><!-- 📲 BUTTONS --><a href="https://wa.me/919734867689" class="whatsapp">WhatsApp</a>
+
+<a href="https://wa.me/919734867689?text=Hello%20Rupa's%20Makeover,%20I%20want%20to%20book%20a%20makeup%20service.%20Please%20share%20details." 
+class="booking">Book Now</a>
+
+<script>
+
+/* scroll animation */
+const services = document.querySelectorAll('.service');
+
+function reveal(){
+services.forEach((service,index)=>{
+const pos=service.getBoundingClientRect().top;
+const h=window.innerHeight;
+
+if(pos < h-50){
+setTimeout(()=>{service.classList.add('show')},index*200);
+}
+});
+}
+
+window.addEventListener('scroll',reveal);
+window.addEventListener('load',reveal);
+
+/* 🔥 intro শেষ হলে button show */
+setTimeout(()=>{
+document.querySelector('.whatsapp').style.display="block";
+document.querySelector('.booking').style.display="block";
+},2000);
+
+</script></body>
+</html>
